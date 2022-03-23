@@ -1,5 +1,6 @@
 import {FirebaseApp, FirebaseOptions, initializeApp} from 'firebase/app'
 import {Auth,getAuth} from 'firebase/auth'
+
 const firebaseConfig: FirebaseOptions = {
   apiKey: import.meta.env.VITE_apiKey as string,
   authDomain: import.meta.env.VITE_authDomain as string,

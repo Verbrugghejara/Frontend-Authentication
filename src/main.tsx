@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import { BrowserRouter } from 'react-router-dom'
+import AppRouter from './screens/index'
 import './assets/tailwind.css'
-import Login from './screens/auth/Login'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login/>
+    <BrowserRouter>
+    <AppRouter/>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

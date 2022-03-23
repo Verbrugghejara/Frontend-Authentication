@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Router, Routes } from "react-router-dom"
 import { AuthContext, useAuth } from "../utils/AuthContext";
 import ForgotPassword from "./auth/ForgotPassword";
 import Login from "./auth/Login";
@@ -14,15 +14,16 @@ export default ()=> {
     // ctx.user ={name:'test'}
     return (
       <AuthContext.Provider value={{user:undefined}}>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          {/* PROTECTED */}
-          <Route path="/profile" element={<Profile />} />
-          {/* FALLBACK / CATCH ALL */}
-          <Route path="*" element={<ClientError />} />
-        </Routes>
+          <Routes>
+
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            {/* PROTECTED */}
+            <Route path="/profile" element={<Profile />} />
+            {/* FALLBACK / CATCH ALL */}
+            <Route path="*" element={<ClientError />} />
+          </Routes>
       </AuthContext.Provider>
     )
 }
